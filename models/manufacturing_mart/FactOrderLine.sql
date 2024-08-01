@@ -26,4 +26,4 @@ select CONCAT(sli.l_orderkey || '|' || sli.l_linenumber) AS order_line_item_id
     , sli.l_partkey AS sk_part_id
     , sli.l_suppkey AS sk_supplier_id
 FROM {{ source('tpch', 'silver_lineitem') }} sli
-LEFT JOIN {{ source('tpch', 'silver_orders') }} so
+LEFT JOIN {{ source('tpch', 'silver_orders') }} so ON sli.l_orderkey = so.o_orderkey
