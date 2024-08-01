@@ -18,3 +18,5 @@ sources:
       - name: silver_customer
       - name: silver_nation
       - name: silver_region
+      - name: silver_orders
+      - name: silver_lineitem

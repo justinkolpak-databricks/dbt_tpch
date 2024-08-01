@@ -1,4 +1,4 @@
-{{ config(materialized='materialized_view') }}
+{{ config(materialized='table') }}
 
 SELECT sc.c_custkey AS sk_customer_id
     , sc.c_name as full_name
